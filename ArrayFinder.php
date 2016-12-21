@@ -8,7 +8,7 @@ class ArrayFinder implements
     \Iterator,
     \Serializable
 {
-    private $content = [];
+    private $content = array();
     private $position = 0;
     private $pathSeparator = '.';
 
@@ -17,7 +17,7 @@ class ArrayFinder implements
      *
      * @param array $content Content of the array
      */
-    public function __construct(array $content = [])
+    public function __construct(array $content = array())
     {
         $this->content = $content;
     }
@@ -207,7 +207,7 @@ class ArrayFinder implements
         return $this;
     }
 
-    private function callAtPath($path, callable $callback, $createPath = false, &$currentOffset = null)
+    private function callAtPath($path, $callback, $createPath = false, &$currentOffset = null)
     {
         if ($currentOffset === null) {
             $currentOffset = &$this->content;
@@ -223,7 +223,7 @@ class ArrayFinder implements
 
         if (!isset($currentOffset[$nextPath])) {
             if ($createPath) {
-                $currentOffset[$nextPath] = [];
+                $currentOffset[$nextPath] = array();
             } else {
                 return;
             }
