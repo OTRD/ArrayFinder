@@ -1,10 +1,10 @@
 {
-    "name": "OTRD/array-finder",
+    "name": "shudrum/array-finder",
     "type": "library",
     "description": "ArrayFinder component",
     "keywords": [],
     "license": "MIT",
-    "homepage": "https://github.com/OTRD/ArrayFinder",
+    "homepage": "https://github.com/shudrum/ArrayFinder",
     "authors": [
         {
             "name": "Julien Martin",
